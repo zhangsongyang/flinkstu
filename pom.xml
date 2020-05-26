@@ -32,7 +32,7 @@ under the License.
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<flink.version>1.10.0</flink.version>
 		<java.version>1.8</java.version>
-		<scala.binary.version>2.11</scala.binary.version>
+		<scala.binary.version>2.12</scala.binary.version>
 
 		<lombok.version>1.18.10</lombok.version>
 
@@ -75,7 +75,7 @@ under the License.
 		<!-- https://mvnrepository.com/artifact/org.apache.flink/flink-connector-kafka -->
 		<dependency>
 			<groupId>org.apache.flink</groupId>
-			<artifactId>flink-connector-kafka_2.12</artifactId>
+			<artifactId>flink-connector-kafka_${scala.binary.version}</artifactId>
 			<version>1.10.0</version>
 		</dependency>
 
@@ -108,6 +108,13 @@ under the License.
 			<version>1.2.17</version>
 			<scope>runtime</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.20</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
